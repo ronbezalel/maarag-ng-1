@@ -19,23 +19,6 @@ export class MovieService {
         return this.http.get(url);
     }
 
-    // getMovieById(id: number){
-    //     let headers = new Headers({ 'Content-Type': 'application/json' });
-    //     let options = new RequestOptions({ headers: headers });
-
-    //     var body = new IdParams(id);
-
-    //     let httpPost = this.http.post(' https://ws-most-watched-movies.herokuapp.com/getMostWatchedById', JSON.stringify(body), options);
-
-    //     httpPost.subscribe(success => { // <-------
-    //             console.log('suc', success);
-    //         }, error => {
-    //            console.log('err', error);
-    //         });
-
-    //     return httpPost;
-    // }
-
     getMoviesByLimit(min: number, max: number){
         var url = `${domain}getMostWatchedByLimit?min=${min}&max=${max}`;
         return this.http.get(url);
