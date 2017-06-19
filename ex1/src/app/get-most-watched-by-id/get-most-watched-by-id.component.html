@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="input-group space">
+      <input type="number" class="form-control" placeholder="Search movie id" [(ngModel)]="selectedId">
+      <span class="input-group-btn">
+        <button class="btn btn-secondary" type="button" (click)="getMovieById()">Search</button>
+      </span>
+    </div>
+    <div class="panel panel-default space" *ngIf="selecteMovie != null">
+        <div class="panel-heading">
+            Selected movie
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <h5 class="col-xs-2">Id</h5>
+                <h5 class="col-xs-4">Name</h5>
+                <h5 class="col-xs-2">Views</h5>
+                <h5 class="col-xs-2">Description</h5>
+            </div>
+            <hr>
+            <div class="row" *ngIf="selecteMovie != null">
+                <div class="col-xs-2">{{selecteMovie.id}}</div>
+                <div class="col-xs-4">{{selecteMovie.name}}</div>
+                <div class="col-xs-2">{{selecteMovie.views}}</div>
+                <div class="col-xs-2">{{selecteMovie.description}}</div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <a class="btn btn-primary space" href="#" routerLink="/allMovies">Back</a>
+    </div>
+</div>
+

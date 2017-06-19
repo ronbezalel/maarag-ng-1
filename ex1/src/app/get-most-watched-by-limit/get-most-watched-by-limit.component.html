@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row space">
+        <div class="col-xs-4">
+            <input type="number" class="form-control" placeholder="min" [(ngModel)]="min">
+        </div>
+        <div class="col-xs-4">
+            <input type="number" class="form-control" placeholder="min" [(ngModel)]="max">
+        </div>
+        <div class="col-xs-4">
+            <button class="btn btn-secondary" type="button" (click)="getMovieByLimit()">Find</button>
+        </div>
+    </div>
+    <div class="panel panel-default space" *ngIf="foundsMovies.length > 0">
+        <div class="panel-heading">
+            Found movies by limit from {{min}} to {{max}}
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <h5 class="col-xs-1">Id</h5>
+                <h5 class="col-xs-4">Name</h5>
+                <h5 class="col-xs-2">Views</h5>
+                <h5 class="col-xs-5">Description</h5>
+            </div>
+            <div class="row" *ngFor="let movie of foundsMovies">
+                <div class="col-xs-1">{{movie.id}}</div>
+                <div class="col-xs-4">{{movie.name}}</div>
+                <div class="col-xs-2">{{movie.views}}</div>
+                <div class="col-xs-5">{{movie.description}}</div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <a class="btn btn-primary space" href="#" routerLink="/allMovies">Back</a>
+    </div>
+</div>

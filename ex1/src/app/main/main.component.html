@@ -1,0 +1,24 @@
+<div class="container">
+    <h1>Most watched movies</h1>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            All movies
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <h5 class="col-xs-1">Id</h5>
+                <h5 class="col-xs-4">Name</h5>
+                <h5 class="col-xs-2">Views</h5>
+                <h5 class="col-xs-5">Description</h5>
+            </div>
+            <div class="row" *ngFor="let movie of movies">
+                <div class="col-xs-1">{{movie.id}}</div>
+                <div class="col-xs-4">{{movie.name}}</div>
+                <div class="col-xs-2">{{movie.views}}</div>
+                <div class="col-xs-5">{{movie.description}}</div>
+            </div>
+        </div>
+    </div>
+    <a class="btn btn-primary" href="#" routerLink="/getMostWatchedByLimit">Get movie By limit</a>
+    <a class="btn btn-primary" href="#" routerLink="/getmostWatchedByLanguage">Get movie By Language</a>
+</div>
