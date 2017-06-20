@@ -16,7 +16,7 @@ export class GetMostWatchedByIdComponent implements OnInit {
   constructor(private moviesService: MovieService) { }
 
   getMovieById(){
-      this.moviesService.getMovieById(this.selectedId);
+      //this.moviesService.getMovieById(this.selectedId);
   }
 
   ngOnInit() {
